@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const { t } = useTranslation();
@@ -84,15 +85,15 @@ const Services = () => {
                 </div>
                 <h3 className="text-2xl font-semibold text-navy mb-4">{t(service.titleKey)}</h3>
                 <p className="text-slate mb-6">{t(service.descriptionKey)}</p>
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="text-primary font-semibold hover:underline inline-flex items-center"
                 >
                   {t('services.getQuote')}
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

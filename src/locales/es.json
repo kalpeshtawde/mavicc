@@ -117,6 +117,35 @@
       "emailAddress": "info@mavicollision.com",
       "hours": "Horario de Atención",
       "hoursText": "Lun - Vie: 8:30 AM - 6:00 PM\nSábado: 8:30 AM - 2:00 PM\nDomingo: Cerrado"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "items": {
+        "q1": {
+          "question": "¿Trabajan con todas las compañías de seguros?",
+          "answer": "¡Sí! Trabajamos con todas las principales compañías de seguros y podemos ayudarlo a navegar el proceso de reclamos de principio a fin."
+        },
+        "q2": {
+          "question": "¿Cuánto tiempo tomará mi reparación?",
+          "answer": "El tiempo de reparación varía según la magnitud del daño. Las reparaciones menores pueden tomar de 2 a 3 días, mientras que las reparaciones de colisión importantes pueden tomar de 1 a 2 semanas. Le proporcionaremos un cronograma preciso durante su presupuesto."
+        },
+        "q3": {
+          "question": "¿Ofrecen presupuestos gratuitos?",
+          "answer": "¡Por supuesto! Proporcionamos presupuestos gratuitos y sin compromiso para todo el trabajo de reparación de colisiones. Contáctenos o visite nuestro taller para obtener su presupuesto gratuito."
+        },
+        "q4": {
+          "question": "¿Se verá afectada mi garantía?",
+          "answer": "No. Utilizamos piezas OEM (fabricante de equipo original) y seguimos las especificaciones del fabricante, por lo que la garantía de su vehículo permanece intacta."
+        },
+        "q5": {
+          "question": "¿Proporcionan autos de alquiler?",
+          "answer": "Podemos ayudar a organizar servicios de alquiler de autos a través de su compañía de seguros. Muchas pólizas de seguro incluyen cobertura de auto de alquiler durante las reparaciones."
+        },
+        "q6": {
+          "question": "¿Qué métodos de pago aceptan?",
+          "answer": "Aceptamos todas las principales tarjetas de crédito, tarjetas de débito, cheques y pagos de seguros. Trabajaremos directamente con su compañía de seguros para un procesamiento de pago sin problemas."
+        }
+      }
     }
   },
   "about": {

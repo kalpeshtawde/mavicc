@@ -210,6 +210,27 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      <section className="bg-warmwhite py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-navy mb-12">{t('contact.faq.title')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {['q1', 'q2', 'q3', 'q4', 'q5', 'q6'].map((key) => (
+              <div key={key} className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-lg font-semibold text-navy mb-3 flex items-start">
+                  <svg className="w-6 h-6 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {t(`contact.faq.items.${key}.question`)}
+                </h3>
+                <p className="text-slate leading-relaxed pl-8">
+                  {t(`contact.faq.items.${key}.answer`)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
