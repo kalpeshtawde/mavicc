@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "gallery": "Gallery",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "title": "Expert Collision Repair You Can Trust",
+      "subtitle": "Professional auto body repair services with state-of-the-art technology and certified technicians",
+      "cta1": "Get Free Estimate",
+      "cta2": "View Services"
+    },
+    "stats": {
+      "years": "Years in Business",
+      "cars": "Cars Repaired",
+      "customers": "Happy Customers"
+    },
+    "servicesPreview": {
+      "title": "Our Services",
+      "collision": {
+        "title": "Collision Repair",
+        "description": "Complete collision repair services to restore your vehicle to pre-accident condition"
+      },
+      "paint": {
+        "title": "Paint Services",
+        "description": "Professional paint matching and application for a flawless finish"
+      },
+      "insurance": {
+        "title": "Insurance Claims",
+        "description": "We work directly with your insurance company to streamline the claims process"
+      },
+      "learnMore": "Learn More"
+    },
+    "reviews": {
+      "title": "What Our Customers Say",
+      "subtitle": "See reviews from our satisfied customers",
+      "placeholder": "Google Reviews Widget Placeholder"
+    },
+    "cta": {
+      "title": "Ready to Restore Your Vehicle?",
+      "subtitle": "Get a free estimate today and experience the Mavi difference",
+      "button": "Contact Us Now"
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive auto body repair services to get you back on the road safely"
+    },
+    "items": {
+      "collision": {
+        "title": "Collision Repair",
+        "description": "Comprehensive collision repair services using the latest technology and OEM parts. We restore your vehicle to factory specifications with precision and care."
+      },
+      "paint": {
+        "title": "Paint Services",
+        "description": "Expert color matching and professional paint application. Our state-of-the-art paint booth ensures a perfect, long-lasting finish every time."
+      },
+      "dent": {
+        "title": "Dent Removal",
+        "description": "Paintless dent repair and traditional dent removal services. We can fix minor dings to major dents while preserving your original paint."
+      },
+      "frame": {
+        "title": "Frame Straightening",
+        "description": "Advanced frame straightening and alignment using computerized measuring systems. We ensure your vehicle's structural integrity is fully restored."
+      },
+      "glass": {
+        "title": "Glass Replacement",
+        "description": "Professional windshield and auto glass replacement services. We use only high-quality glass and ensure proper installation for your safety."
+      },
+      "insurance": {
+        "title": "Insurance Claims Assistance",
+        "description": "We work directly with all major insurance companies to make your claim process smooth and hassle-free. Let us handle the paperwork."
+      }
+    },
+    "getQuote": "Get a Quote"
+  },
+  "gallery": {
+    "hero": {
+      "title": "Our Work Gallery",
+      "subtitle": "See the quality of our collision repair and restoration work"
+    },
+    "filters": {
+      "all": "All",
+      "collision": "Collision",
+      "paint": "Paint",
+      "frame": "Frame"
+    },
+    "noImages": "No images found in this category"
+  },
+  "contact": {
+    "hero": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch with us for a free estimate or to schedule your repair"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "email": "Email Address",
+      "message": "Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We'll get back to you soon.",
+      "error": "Failed to send message. Please try again or call us directly."
+    },
+    "visit": {
+      "title": "Visit Us",
+      "address": "Address",
+      "addressText": "56 Norcross St\nRoswell, GA 30075",
+      "phone": "Phone",
+      "phoneNumber": "(762) 726-2000",
+      "email": "Email",
+      "emailAddress": "info@mavicollision.com",
+      "hours": "Business Hours",
+      "hoursText": "Mon - Fri: 8:30 AM - 6:00 PM\nSaturday: 8:30 AM - 2:00 PM\nSunday: Closed"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Us",
+      "subtitle": "Your trusted partner in collision repair for over 25 years"
+    },
+    "story": {
+      "title": "Our Story",
+      "p1": "Founded in 1998, Mavi Collision Center has been serving our community with exceptional auto body repair services for over two decades. What started as a small family-owned shop has grown into one of the region's most trusted collision repair facilities.",
+      "p2": "Our commitment to quality workmanship, honest service, and customer satisfaction has remained unchanged since day one. We treat every vehicle as if it were our own, ensuring that each repair meets or exceeds manufacturer specifications.",
+      "p3": "With state-of-the-art equipment, certified technicians, and a passion for excellence, we're proud to be your first choice for collision repair services."
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": {
+        "title": "Quality",
+        "description": "We never compromise on quality. Every repair meets the highest industry standards."
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "Transparent pricing and honest communication throughout the entire repair process."
+      },
+      "speed": {
+        "title": "Speed",
+        "description": "Fast turnaround times without sacrificing quality to get you back on the road quickly."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Clear explanations and detailed estimates so you know exactly what to expect."
+      }
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "members": {
+        "john": {
+          "name": "John Smith",
+          "role": "Owner & Master Technician"
+        },
+        "sarah": {
+          "name": "Sarah Johnson",
+          "role": "Paint Specialist"
+        },
+        "mike": {
+          "name": "Mike Davis",
+          "role": "Frame Technician"
+        },
+        "emily": {
+          "name": "Emily Chen",
+          "role": "Customer Service Manager"
+        }
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Expert collision repair services you can trust. Restoring your vehicle to perfection.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "copyright": "Mavi Collision Center. All rights reserved."
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "gallery": "Galería",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "home": {
+    "hero": {
+      "title": "Reparación de Colisiones Experta en la que Puede Confiar",
+      "subtitle": "Servicios profesionales de reparación de carrocería con tecnología de última generación y técnicos certificados",
+      "cta1": "Obtener Presupuesto Gratis",
+      "cta2": "Ver Servicios"
+    },
+    "stats": {
+      "years": "Años en el Negocio",
+      "cars": "Autos Reparados",
+      "customers": "Clientes Satisfechos"
+    },
+    "servicesPreview": {
+      "title": "Nuestros Servicios",
+      "collision": {
+        "title": "Reparación de Colisiones",
+        "description": "Servicios completos de reparación de colisiones para restaurar su vehículo a su condición previa al accidente"
+      },
+      "paint": {
+        "title": "Servicios de Pintura",
+        "description": "Igualación profesional de pintura y aplicación para un acabado impecable"
+      },
+      "insurance": {
+        "title": "Reclamos de Seguro",
+        "description": "Trabajamos directamente con su compañía de seguros para agilizar el proceso de reclamos"
+      },
+      "learnMore": "Más Información"
+    },
+    "reviews": {
+      "title": "Lo Que Dicen Nuestros Clientes",
+      "subtitle": "Vea las reseñas de nuestros clientes satisfechos",
+      "placeholder": "Marcador de Widget de Reseñas de Google"
+    },
+    "cta": {
+      "title": "¿Listo para Restaurar Su Vehículo?",
+      "subtitle": "Obtenga un presupuesto gratuito hoy y experimente la diferencia Mavi",
+      "button": "Contáctenos Ahora"
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Nuestros Servicios",
+      "subtitle": "Servicios integrales de reparación de carrocería para que vuelva a la carretera de manera segura"
+    },
+    "items": {
+      "collision": {
+        "title": "Reparación de Colisiones",
+        "description": "Servicios integrales de reparación de colisiones utilizando la última tecnología y piezas OEM. Restauramos su vehículo a las especificaciones de fábrica con precisión y cuidado."
+      },
+      "paint": {
+        "title": "Servicios de Pintura",
+        "description": "Igualación experta de color y aplicación profesional de pintura. Nuestra cabina de pintura de última generación garantiza un acabado perfecto y duradero en todo momento."
+      },
+      "dent": {
+        "title": "Eliminación de Abolladuras",
+        "description": "Reparación de abolladuras sin pintura y servicios tradicionales de eliminación de abolladuras. Podemos reparar desde pequeñas marcas hasta abolladuras importantes preservando su pintura original."
+      },
+      "frame": {
+        "title": "Enderezado de Chasis",
+        "description": "Enderezado y alineación avanzada de chasis utilizando sistemas de medición computarizados. Garantizamos que la integridad estructural de su vehículo se restaure por completo."
+      },
+      "glass": {
+        "title": "Reemplazo de Vidrios",
+        "description": "Servicios profesionales de reemplazo de parabrisas y vidrios automotrices. Utilizamos solo vidrio de alta calidad y garantizamos una instalación adecuada para su seguridad."
+      },
+      "insurance": {
+        "title": "Asistencia con Reclamos de Seguro",
+        "description": "Trabajamos directamente con todas las principales compañías de seguros para que su proceso de reclamo sea fluido y sin complicaciones. Déjenos manejar el papeleo."
+      }
+    },
+    "getQuote": "Obtener Cotización"
+  },
+  "gallery": {
+    "hero": {
+      "title": "Galería de Nuestro Trabajo",
+      "subtitle": "Vea la calidad de nuestro trabajo de reparación y restauración de colisiones"
+    },
+    "filters": {
+      "all": "Todos",
+      "collision": "Colisión",
+      "paint": "Pintura",
+      "frame": "Chasis"
+    },
+    "noImages": "No se encontraron imágenes en esta categoría"
+  },
+  "contact": {
+    "hero": {
+      "title": "Contáctenos",
+      "subtitle": "Póngase en contacto con nosotros para obtener un presupuesto gratuito o programar su reparación"
+    },
+    "form": {
+      "title": "Envíenos un Mensaje",
+      "name": "Nombre Completo",
+      "phone": "Número de Teléfono",
+      "email": "Correo Electrónico",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.",
+      "error": "Error al enviar el mensaje. Inténtelo de nuevo o llámenos directamente."
+    },
+    "visit": {
+      "title": "Visítenos",
+      "address": "Dirección",
+      "addressText": "56 Norcross St\nRoswell, GA 30075",
+      "phone": "Teléfono",
+      "phoneNumber": "(762) 726-2000",
+      "email": "Correo",
+      "emailAddress": "info@mavicollision.com",
+      "hours": "Horario de Atención",
+      "hoursText": "Lun - Vie: 8:30 AM - 6:00 PM\nSábado: 8:30 AM - 2:00 PM\nDomingo: Cerrado"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Nosotros",
+      "subtitle": "Su socio de confianza en reparación de colisiones por más de 25 años"
+    },
+    "story": {
+      "title": "Nuestra Historia",
+      "p1": "Fundado en 1998, Mavi Collision Center ha estado sirviendo a nuestra comunidad con servicios excepcionales de reparación de carrocería durante más de dos décadas. Lo que comenzó como un pequeño taller familiar ha crecido hasta convertirse en una de las instalaciones de reparación de colisiones más confiables de la región.",
+      "p2": "Nuestro compromiso con la calidad del trabajo, el servicio honesto y la satisfacción del cliente ha permanecido sin cambios desde el primer día. Tratamos cada vehículo como si fuera nuestro, asegurando que cada reparación cumpla o supere las especificaciones del fabricante.",
+      "p3": "Con equipos de última generación, técnicos certificados y una pasión por la excelencia, estamos orgullosos de ser su primera opción para servicios de reparación de colisiones."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "quality": {
+        "title": "Calidad",
+        "description": "Nunca comprometemos la calidad. Cada reparación cumple con los más altos estándares de la industria."
+      },
+      "trust": {
+        "title": "Confianza",
+        "description": "Precios transparentes y comunicación honesta durante todo el proceso de reparación."
+      },
+      "speed": {
+        "title": "Rapidez",
+        "description": "Tiempos de entrega rápidos sin sacrificar la calidad para que vuelva a la carretera rápidamente."
+      },
+      "transparency": {
+        "title": "Transparencia",
+        "description": "Explicaciones claras y presupuestos detallados para que sepa exactamente qué esperar."
+      }
+    },
+    "team": {
+      "title": "Conozca Nuestro Equipo",
+      "members": {
+        "john": {
+          "name": "John Smith",
+          "role": "Propietario y Técnico Maestro"
+        },
+        "sarah": {
+          "name": "Sarah Johnson",
+          "role": "Especialista en Pintura"
+        },
+        "mike": {
+          "name": "Mike Davis",
+          "role": "Técnico de Chasis"
+        },
+        "emily": {
+          "name": "Emily Chen",
+          "role": "Gerente de Servicio al Cliente"
+        }
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Servicios expertos de reparación de colisiones en los que puede confiar. Restaurando su vehículo a la perfección.",
+    "quickLinks": "Enlaces Rápidos",
+    "contactInfo": "Información de Contacto",
+    "copyright": "Mavi Collision Center. Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "images": [
+    {
+      "src": "collision-repair-1.jpg",
+      "category": "collision",
+      "title": "Front End Collision Repair"
+    },
+    {
+      "src": "paint-job-1.jpg",
+      "category": "paint",
+      "title": "Professional Paint Restoration"
+    },
+    {
+      "src": "frame-work-1.jpg",
+      "category": "frame",
+      "title": "Frame Straightening Work"
+    }
+  ]
+}
