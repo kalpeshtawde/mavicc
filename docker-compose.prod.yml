@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mavicc-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mavicc-web
+    ports:
+      - "8083:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - mavicc-network
+
+networks:
+  mavicc-network:
+    driver: bridge
