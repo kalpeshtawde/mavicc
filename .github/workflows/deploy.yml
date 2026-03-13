@@ -32,11 +32,12 @@ jobs:
 
       - name: Deploy to Server
         if: success()
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
           script: |
             cd /root/src/mavicc
             git pull origin main
