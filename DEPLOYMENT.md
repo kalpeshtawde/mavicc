@@ -1,12 +1,29 @@
 # Deployment Guide for Mavi Collision Center
 
 ## Prerequisites
-- Domain: mavicollisioncenter.com pointed to your VPS IP
+- Domain: mavicollisioncenter.com pointed to your VPS IP (104.128.67.137)
 - Docker and Docker Compose installed on server
 - Nginx installed and configured
 - Certbot installed for SSL certificates
 
-## Deployment Steps
+## Deployment Methods
+
+### Method 1: Automated Deployment (Recommended)
+Uses GitHub Actions to automatically deploy when you push to the main branch.
+
+**Setup:**
+1. Configure GitHub Secrets (see `.github/SETUP_SECRETS.md`)
+2. Push to main branch
+3. GitHub Actions automatically deploys to production
+
+**Workflow triggers on:**
+- Push to main branch
+- Pull request to main branch (build only, no deploy)
+
+### Method 2: Manual Deployment
+Use the deploy script or manual commands.
+
+## Initial Setup Steps
 
 ### 1. Update Nginx Configuration
 
