@@ -174,7 +174,7 @@ const Contact = () => {
                   </svg>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">{t('contact.visit.email')}</h3>
-                    <p className="text-silver">info@mavicollision.com</p>
+                    <p className="text-silver">info@mavicollisioncenter.com</p>
                   </div>
                 </div>
               </div>
