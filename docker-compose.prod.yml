@@ -11,6 +11,21 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
+    depends_on:
+      - mavicc-backend
+    networks:
+      - mavicc-network
+
+  mavicc-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: mavicc-backend
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    env_file:
+      - .env
     networks:
       - mavicc-network
 

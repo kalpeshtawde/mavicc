@@ -1,10 +1,8 @@
-import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
   const { t } = useTranslation();
-  const formRef = useRef();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -20,24 +18,34 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
 
-    emailjs.sendForm(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID',
-      formRef.current,
-      'YOUR_PUBLIC_KEY'
-    )
-      .then((result) => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         setStatus('success');
         setFormData({ name: '', phone: '', email: '', message: '' });
         setTimeout(() => setStatus(''), 5000);
-      }, (error) => {
+      } else {
         setStatus('error');
         setTimeout(() => setStatus(''), 5000);
-      });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('error');
+      setTimeout(() => setStatus(''), 5000);
+    }
   };
 
   return (
