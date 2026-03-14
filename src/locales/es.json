@@ -34,6 +34,11 @@
       },
       "learnMore": "Más Información"
     },
+    "gallery": {
+      "title": "Nuestro Trabajo",
+      "subtitle": "Vea la calidad de nuestros servicios de reparación de colisiones y pintura",
+      "viewAll": "Ver Galería Completa"
+    },
     "reviews": {
       "title": "Lo Que Dicen Nuestros Clientes",
       "subtitle": "Vea las reseñas de nuestros clientes satisfechos",

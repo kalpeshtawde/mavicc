@@ -1,19 +1,49 @@
 {
   "images": [
     {
-      "src": "collision-repair-1.jpg",
+      "src": "/images/gallery/collision/1.webp",
       "category": "collision",
-      "title": "Front End Collision Repair"
+      "title": "Collision Repair 1"
     },
     {
-      "src": "paint-job-1.jpg",
-      "category": "paint",
-      "title": "Professional Paint Restoration"
+      "src": "/images/gallery/collision/2.webp",
+      "category": "collision",
+      "title": "Collision Repair 2"
     },
     {
-      "src": "frame-work-1.jpg",
-      "category": "frame",
-      "title": "Frame Straightening Work"
+      "src": "/images/gallery/collision/3.webp",
+      "category": "collision",
+      "title": "Collision Repair 3"
+    },
+    {
+      "src": "/images/gallery/collision/4.webp",
+      "category": "collision",
+      "title": "Collision Repair 4"
+    },
+    {
+      "src": "/images/gallery/collision/5.webp",
+      "category": "collision",
+      "title": "Collision Repair 5"
+    },
+    {
+      "src": "/images/gallery/collision/6.webp",
+      "category": "collision",
+      "title": "Collision Repair 6"
+    },
+    {
+      "src": "/images/gallery/collision/7.webp",
+      "category": "collision",
+      "title": "Collision Repair 7"
+    },
+    {
+      "src": "/images/gallery/collision/8.webp",
+      "category": "collision",
+      "title": "Collision Repair 8"
+    },
+    {
+      "src": "/images/gallery/collision/9.webp",
+      "category": "collision",
+      "title": "Collision Repair 9"
     }
   ]
 }

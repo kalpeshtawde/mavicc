@@ -6,6 +6,7 @@ const Gallery = () => {
   const [images, setImages] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [lightboxImage, setLightboxImage] = useState(null);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   useEffect(() => {
     fetch('/images/gallery-manifest.json')
@@ -14,11 +15,35 @@ const Gallery = () => {
       .catch(error => console.error('Error loading gallery:', error));
   }, []);
 
-  const categories = ['all', ...new Set(images.map(img => img.category))];
+  const categories = ['all', 'collision', 'paint', 'frame'];
 
   const filteredImages = selectedCategory === 'all'
     ? images
     : images.filter(img => img.category === selectedCategory);
+
+  const openLightbox = (image, index) => {
+    setLightboxImage(image);
+    setLightboxIndex(index);
+  };
+
+  const closeLightbox = () => {
+    setLightboxImage(null);
+    setLightboxIndex(0);
+  };
+
+  const goToNext = (e) => {
+    e.stopPropagation();
+    const nextIndex = (lightboxIndex + 1) % filteredImages.length;
+    setLightboxIndex(nextIndex);
+    setLightboxImage(filteredImages[nextIndex]);
+  };
+
+  const goToPrevious = (e) => {
+    e.stopPropagation();
+    const prevIndex = (lightboxIndex - 1 + filteredImages.length) % filteredImages.length;
+    setLightboxIndex(prevIndex);
+    setLightboxImage(filteredImages[prevIndex]);
+  };
 
   return (
     <div className="bg-navy min-h-screen">
@@ -54,20 +79,18 @@ const Gallery = () => {
               <div
                 key={index}
                 className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-steel aspect-video"
-                onClick={() => setLightboxImage(image)}
+                onClick={() => openLightbox(image, index)}
               >
+                <img
+                  src={image.src}
+                  alt={image.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-200 z-20">
                   <h3 className="text-lg font-semibold">{image.title}</h3>
                   <p className="text-sm text-silver capitalize">{image.category}</p>
-                </div>
-                <div className="w-full h-full flex items-center justify-center bg-steel">
-                  <div className="text-center text-silver">
-                    <svg className="w-16 h-16 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <p className="text-sm">{image.src}</p>
-                  </div>
                 </div>
               </div>
             ))}
@@ -84,25 +107,52 @@ const Gallery = () => {
       {lightboxImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
-          onClick={() => setLightboxImage(null)}
+          onClick={closeLightbox}
         >
           <div className="relative max-w-5xl w-full">
             <button
-              onClick={() => setLightboxImage(null)}
+              onClick={closeLightbox}
               className="absolute -top-12 right-0 text-white hover:text-accent transition-colors"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <div className="bg-steel rounded-lg p-8 aspect-video flex items-center justify-center">
-              <div className="text-center text-white">
-                <svg className="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+
+            {/* Previous Arrow */}
+            <button
+              onClick={goToPrevious}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-steel bg-opacity-80 hover:bg-opacity-100 text-white p-3 rounded-full transition-all duration-200 hover:scale-110"
+              aria-label="Previous image"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* Next Arrow */}
+            <button
+              onClick={goToNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-steel bg-opacity-80 hover:bg-opacity-100 text-white p-3 rounded-full transition-all duration-200 hover:scale-110"
+              aria-label="Next image"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <div className="bg-midnight rounded-lg overflow-hidden" onClick={(e) => e.stopPropagation()}>
+              <img
+                src={lightboxImage.src}
+                alt={lightboxImage.title}
+                className="w-full h-auto max-h-[80vh] object-contain"
+              />
+              <div className="p-6 bg-steel text-white">
                 <h3 className="text-2xl font-semibold mb-2">{lightboxImage.title}</h3>
                 <p className="text-silver capitalize">{lightboxImage.category}</p>
-                <p className="text-sm text-slate mt-4">{lightboxImage.src}</p>
+                <p className="text-sm text-slate mt-2">
+                  {lightboxIndex + 1} / {filteredImages.length}
+                </p>
               </div>
             </div>
           </div>

@@ -105,6 +105,53 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-navy mb-4">{t('home.gallery.title')}</h2>
+          <p className="text-center text-slate mb-12">{t('home.gallery.subtitle')}</p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <Link to="/gallery" className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-200 group">
+              <img 
+                src="/images/gallery/collision/1.webp" 
+                alt="Collision Repair 1" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+              />
+            </Link>
+            <Link to="/gallery" className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-200 group">
+              <img 
+                src="/images/gallery/collision/2.webp" 
+                alt="Collision Repair 2" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+              />
+            </Link>
+            <Link to="/gallery" className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-200 group">
+              <img 
+                src="/images/gallery/collision/3.webp" 
+                alt="Collision Repair 3" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+              />
+            </Link>
+            <Link to="/gallery" className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-200 group">
+              <img 
+                src="/images/gallery/collision/4.webp" 
+                alt="Collision Repair 4" 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+              />
+            </Link>
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/gallery"
+              className="inline-block bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors duration-200"
+            >
+              {t('home.gallery.viewAll')}
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-ice py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-navy mb-4">{t('home.reviews.title')}</h2>
