@@ -7,7 +7,11 @@ const Contact = () => {
     name: '',
     phone: '',
     email: '',
-    message: ''
+    message: '',
+    make: '',
+    model: '',
+    year: '',
+    vin: ''
   });
   const [status, setStatus] = useState('');
 
@@ -35,7 +39,7 @@ const Contact = () => {
 
       if (response.ok && data.success) {
         setStatus('success');
-        setFormData({ name: '', phone: '', email: '', message: '' });
+        setFormData({ name: '', phone: '', email: '', message: '', make: '', model: '', year: '', vin: '' });
         setTimeout(() => setStatus(''), 5000);
       } else {
         setStatus('error');
@@ -110,6 +114,73 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* Vehicle Information - Optional */}
+                <div className="border-t border-silver pt-6 mt-6">
+                  <h3 className="text-lg font-semibold text-navy mb-4">Vehicle Information (Optional)</h3>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="make" className="block text-sm font-medium text-navy mb-2">
+                        Make
+                      </label>
+                      <input
+                        type="text"
+                        id="make"
+                        name="make"
+                        value={formData.make}
+                        onChange={handleChange}
+                        placeholder="e.g., Toyota, Honda, Ford"
+                        className="w-full px-4 py-3 border border-silver rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="model" className="block text-sm font-medium text-navy mb-2">
+                        Model
+                      </label>
+                      <input
+                        type="text"
+                        id="model"
+                        name="model"
+                        value={formData.model}
+                        onChange={handleChange}
+                        placeholder="e.g., Camry, Accord, F-150"
+                        className="w-full px-4 py-3 border border-silver rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="year" className="block text-sm font-medium text-navy mb-2">
+                        Year
+                      </label>
+                      <input
+                        type="text"
+                        id="year"
+                        name="year"
+                        value={formData.year}
+                        onChange={handleChange}
+                        placeholder="e.g., 2020"
+                        className="w-full px-4 py-3 border border-silver rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="vin" className="block text-sm font-medium text-navy mb-2">
+                        VIN
+                      </label>
+                      <input
+                        type="text"
+                        id="vin"
+                        name="vin"
+                        value={formData.vin}
+                        onChange={handleChange}
+                        placeholder="Vehicle Identification Number"
+                        className="w-full px-4 py-3 border border-silver rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
+                    </div>
+                  </div>
+                </div>
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-navy mb-2">
                     {t('contact.form.message')} *
@@ -170,7 +241,8 @@ const Contact = () => {
                   </svg>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">{t('contact.visit.phone')}</h3>
-                    <p className="text-silver">(762) 726-2000</p>
+                    <a href="tel:+17627262000" className="text-silver hover:text-primary transition-colors block">(762) 726-2000</a>
+                    <a href="tel:+16786915109" className="text-silver hover:text-primary transition-colors block">(678) 691-5109</a>
                   </div>
                 </div>
               </div>
