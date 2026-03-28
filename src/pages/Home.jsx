@@ -46,8 +46,8 @@ const Home = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-navy mb-1">All Insurance Approved</h3>
-                <p className="text-slate">We work with all major insurance companies</p>
+                <h3 className="text-2xl font-bold text-navy mb-1">{t('home.badges.insurance.title')}</h3>
+                <p className="text-slate">{t('home.badges.insurance.description')}</p>
               </div>
             </div>
 
@@ -59,9 +59,9 @@ const Home = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-navy mb-1">Payment Accepted</h3>
-                <p className="text-slate mb-2">Venmo • PayPal • Cash App</p>
-                <p className="text-slate">Visa • Mastercard • American Express</p>
+                <h3 className="text-2xl font-bold text-navy mb-1">{t('home.badges.payment.title')}</h3>
+                <p className="text-slate mb-2">{t('home.badges.payment.methods1')}</p>
+                <p className="text-slate">{t('home.badges.payment.methods2')}</p>
               </div>
             </div>
           </div>
@@ -89,8 +89,8 @@ const Home = () => {
 
       <section className="bg-softwhite py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-navy mb-4">Our Services</h2>
-          <p className="text-center text-slate mb-12 text-lg">Comprehensive auto repair solutions for all your vehicle needs</p>
+          <h2 className="text-4xl font-bold text-center text-navy mb-4">{t('home.services.title')}</h2>
+          <p className="text-center text-slate mb-12 text-lg">{t('home.services.subtitle')}</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Body Repair Services */}
@@ -100,32 +100,32 @@ const Home = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-semibold text-navy mb-3">Body Repair Services</h3>
+              <h3 className="text-3xl font-semibold text-navy mb-3">{t('home.services.bodyRepair.title')}</h3>
               <p className="text-slate mb-4">
-                Expert collision repair, painting, dent removal, frame repair, and complete body restoration services.
+                {t('home.services.bodyRepair.description')}
               </p>
               <ul className="text-slate space-y-2 mb-4">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Collision & Accident Repair</span>
+                  <span>{t('home.services.bodyRepair.service1')}</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Auto Painting & Refinishing</span>
+                  <span>{t('home.services.bodyRepair.service2')}</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Paintless Dent Repair (PDR)</span>
+                  <span>{t('home.services.bodyRepair.service3')}</span>
                 </li>
               </ul>
               <span className="text-primary font-semibold group-hover:underline inline-flex items-center">
-                View All Services →
+                {t('home.services.bodyRepair.viewAll')} →
               </span>
             </Link>
 
@@ -137,32 +137,32 @@ const Home = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-3xl font-semibold text-navy mb-3">Mechanical Services</h3>
+              <h3 className="text-3xl font-semibold text-navy mb-3">{t('home.services.mechanical.title')}</h3>
               <p className="text-slate mb-4">
-                Complete mechanical repair and maintenance services to keep your vehicle running smoothly.
+                {t('home.services.mechanical.description')}
               </p>
               <ul className="text-slate space-y-2 mb-4">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Engine Repair & Rebuilding</span>
+                  <span>{t('home.services.mechanical.service1')}</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Transmission Service & Repair</span>
+                  <span>{t('home.services.mechanical.service2')}</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Brake Service & Repair</span>
+                  <span>{t('home.services.mechanical.service3')}</span>
                 </li>
               </ul>
               <span className="text-accent font-semibold group-hover:underline inline-flex items-center">
-                View All Services →
+                {t('home.services.mechanical.viewAll')} →
               </span>
             </Link>
           </div>

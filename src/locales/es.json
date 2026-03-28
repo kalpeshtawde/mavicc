@@ -34,9 +34,40 @@
       },
       "learnMore": "Más Información"
     },
+    "badges": {
+      "insurance": {
+        "title": "Todos los Seguros Aprobados",
+        "description": "Trabajamos con todas las principales compañías de seguros"
+      },
+      "payment": {
+        "title": "Pagos Aceptados",
+        "methods1": "Venmo • PayPal • Cash App",
+        "methods2": "Visa • Mastercard • American Express"
+      }
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "subtitle": "Soluciones completas de reparación automotriz para todas sus necesidades",
+      "bodyRepair": {
+        "title": "Servicios de Reparación de Carrocería",
+        "description": "Reparación experta de colisiones, pintura, eliminación de abolladuras, reparación de chasis y servicios completos de restauración de carrocería.",
+        "service1": "Reparación de Colisiones y Accidentes",
+        "service2": "Pintura y Refinamiento Automotriz",
+        "service3": "Reparación de Abolladuras sin Pintura (PDR)",
+        "viewAll": "Ver Todos los Servicios"
+      },
+      "mechanical": {
+        "title": "Servicios Mecánicos",
+        "description": "Servicios completos de reparación y mantenimiento mecánico para mantener su vehículo funcionando sin problemas.",
+        "service1": "Reparación y Reconstrucción de Motores",
+        "service2": "Servicio y Reparación de Transmisión",
+        "service3": "Servicio y Reparación de Frenos",
+        "viewAll": "Ver Todos los Servicios"
+      }
+    },
     "gallery": {
       "title": "Nuestro Trabajo",
-      "subtitle": "Vea la calidad de nuestros servicios de reparación de colisiones y pintura",
+      "subtitle": "Vea la calidad de nuestros servicios de reparación de colisión y pintura",
       "viewAll": "Ver Galería Completa"
     },
     "reviews": {
