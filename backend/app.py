@@ -46,6 +46,8 @@ def send_contact_email():
         msg['Subject'] = f'New Contact Form Submission from {name}'
         msg['From'] = EMAIL_FROM
         msg['To'] = EMAIL_TO
+        # Set Reply-To to the submitter's email so replies go directly to them
+        msg['Reply-To'] = email
         
         # Plain text version
         text_content = f"""
