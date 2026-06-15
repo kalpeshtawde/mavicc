@@ -120,6 +120,17 @@ const Footer = () => {
 
         <div className="border-t border-steel mt-8 pt-8 text-center text-slate">
           <p>&copy; {new Date().getFullYear()} {t('footer.copyright')}</p>
+          <p className="mt-2 text-sm">
+            {t('footer.developedBy')}{' '}
+            <a
+              href="https://ishasystems.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-medium"
+            >
+              ISHA Systems
+            </a>
+          </p>
         </div>
       </div>
     </footer>
