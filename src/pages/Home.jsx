@@ -6,8 +6,16 @@ const Home = () => {
   
   return (
     <div>
-      <section className="bg-gradient-to-b from-navy to-midnight text-white py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section 
+        className="relative text-white py-20 md:py-32 overflow-hidden"
+        style={{
+          backgroundImage: 'url(/images/hero-background.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/70 to-midnight/80"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-accent text-3xl md:text-5xl font-extrabold mb-6 tracking-wider uppercase" style={{ letterSpacing: '0.15em' }}>
             MAVI COLLISION CENTER
           </div>
