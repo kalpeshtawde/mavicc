@@ -6,25 +6,55 @@ const Home = () => {
   
   return (
     <div>
-      <section 
-        className="relative text-white py-20 md:py-32 overflow-hidden"
-        style={{
-          backgroundImage: 'url(/images/hero-background.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/70 to-midnight/80"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative bg-navy text-white py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 flex justify-center">
+          <div className="relative w-full max-w-7xl">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: 'url(/images/hero-background.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
+            ></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-navy via-transparent to-navy"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/55 to-navy/80"></div>
+          </div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
           <div className="text-accent text-3xl md:text-5xl font-extrabold mb-6 tracking-wider uppercase" style={{ letterSpacing: '0.15em' }}>
             MAVI COLLISION CENTER
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             {t('home.hero.title')}
           </h1>
-          <p className="text-xl md:text-2xl text-silver mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white font-semibold mb-8 max-w-3xl mx-auto">
             {t('home.hero.subtitle')}
           </p>
+          <a
+            href="https://share.google/gkXBqc7ozK8Zmtdk4"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="4.9 out of 5 stars based on Google Reviews"
+            className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 mb-8 text-white transition-colors duration-200"
+          >
+            <div className="flex items-center" aria-hidden="true">
+              {[...Array(5)].map((_, i) => (
+                <svg
+                  key={i}
+                  className="w-5 h-5 md:w-6 md:h-6 text-accent"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.518 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.539 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.196-1.539-1.118l1.518-4.674a1 1 0 00-.363-1.118L2.06 9.801c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.518-4.674z" />
+                </svg>
+              ))}
+            </div>
+            <span className="text-base md:text-lg font-medium">
+              4.9/5 based on Google Reviews
+            </span>
+          </a>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
