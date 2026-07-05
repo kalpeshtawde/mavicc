@@ -18,7 +18,7 @@ const Home = () => {
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: 'url(/images/hero-background.png)',
+                backgroundImage: 'url(/images/hero-background.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',

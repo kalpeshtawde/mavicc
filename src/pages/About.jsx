@@ -64,7 +64,7 @@ const About = () => {
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: 'url(/images/about-hero.png)',
+                backgroundImage: 'url(/images/about-hero.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center top',
                 backgroundRepeat: 'no-repeat',

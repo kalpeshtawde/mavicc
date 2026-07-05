@@ -68,7 +68,7 @@ const BodyRepairServices = () => {
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: 'url(/images/body-repair-hero.png)',
+                backgroundImage: 'url(/images/body-repair-hero.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',

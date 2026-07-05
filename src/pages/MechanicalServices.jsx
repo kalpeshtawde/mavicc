@@ -88,7 +88,7 @@ const MechanicalServices = () => {
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: 'url(/images/mechanical-hero.png)',
+                backgroundImage: 'url(/images/mechanical-hero.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',

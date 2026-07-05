@@ -66,7 +66,7 @@ const Contact = () => {
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: 'url(/images/contact-hero.png)',
+                backgroundImage: 'url(/images/contact-hero.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
