@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 const FAQ = () => {
   const { t } = useTranslation();
@@ -62,6 +63,11 @@ const FAQ = () => {
 
   return (
     <div className="bg-softwhite min-h-screen">
+      <SEO
+        title="FAQ | Mavi Collision Center"
+        description="Answers to common questions about collision repair, insurance claims, rental cars, estimates, warranties, and paint matching at Mavi Collision Center in Roswell, GA."
+        keywords="auto body FAQ, collision repair questions, insurance claims, rental car, repair warranty, free estimate"
+      />
       <section className="bg-navy text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h1>

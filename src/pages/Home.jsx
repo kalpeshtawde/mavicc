@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 const Home = () => {
   const { t } = useTranslation();
   
   return (
     <div>
+      <SEO
+        title="Mavi Collision Center | Expert Auto Body & Collision Repair in Roswell, GA"
+        description="Professional auto body repair, collision repair, and paint services in Roswell, GA. 25+ years of experience, free estimates, and insurance claims assistance from certified technicians."
+        keywords="auto body repair, collision repair, car paint, auto body shop Roswell GA, dent repair, frame repair, insurance claims"
+      />
       <section className="relative bg-navy text-white py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 flex justify-center">
           <div className="relative w-full max-w-7xl">

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 const Gallery = () => {
   const { t } = useTranslation();
@@ -47,6 +48,11 @@ const Gallery = () => {
 
   return (
     <div className="bg-navy min-h-screen">
+      <SEO
+        title="Work Gallery | Mavi Collision Center"
+        description="Browse our gallery of completed collision repair, paint, and body work projects. See the quality craftsmanship at Mavi Collision Center in Roswell, GA."
+        keywords="auto body work gallery, collision repair before after, paint job photos, body shop portfolio"
+      />
       <section className="bg-navy text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('gallery.hero.title')}</h1>

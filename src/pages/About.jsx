@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 const About = () => {
   const { t } = useTranslation();
@@ -52,10 +53,30 @@ const About = () => {
 
   return (
     <div>
-      <section className="bg-navy text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('about.hero.title')}</h1>
-          <p className="text-xl text-silver max-w-3xl mx-auto">
+      <SEO
+        title="About Us | Mavi Collision Center"
+        description="Learn about Mavi Collision Center – 25+ years of trusted auto body and collision repair experience in Roswell, GA, with certified technicians and quality craftsmanship."
+        keywords="about Mavi Collision Center, auto body shop history, certified technicians, Roswell GA collision"
+      />
+      <section className="relative bg-navy text-white py-32 md:py-48 overflow-hidden">
+        <div className="absolute inset-0 flex justify-center">
+          <div className="relative w-full max-w-7xl">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: 'url(/images/about-hero.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center top',
+                backgroundRepeat: 'no-repeat',
+              }}
+            ></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-navy via-transparent to-navy"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/20 to-navy/60"></div>
+          </div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-accent">{t('about.hero.title')}</h1>
+          <p className="text-xl text-white max-w-3xl mx-auto">
             {t('about.hero.subtitle')}
           </p>
         </div>

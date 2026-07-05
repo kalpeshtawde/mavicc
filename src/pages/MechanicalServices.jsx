@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const MechanicalServices = () => {
   const services = [
@@ -76,6 +77,11 @@ const MechanicalServices = () => {
 
   return (
     <div>
+      <SEO
+        title="Mechanical Services – Engine, Brakes & Transmission | Mavi Collision Center"
+        description="Complete mechanical repair and maintenance: engine repair, transmission service, brakes, suspension, diagnostics, and tune-ups in Roswell, GA."
+        keywords="mechanical repair, engine repair, transmission service, brake service, suspension, auto diagnostics, tune-up"
+      />
       <section className="relative bg-navy text-white py-32 md:py-48 overflow-hidden">
         <div className="absolute inset-0 flex justify-center">
           <div className="relative w-full max-w-7xl">

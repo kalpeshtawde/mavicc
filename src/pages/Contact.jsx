@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -54,6 +55,11 @@ const Contact = () => {
 
   return (
     <div className="bg-softwhite min-h-screen">
+      <SEO
+        title="Contact Us | Mavi Collision Center – Roswell, GA"
+        description="Contact Mavi Collision Center at 56 Norcross St, Roswell, GA 30075. Call (762) 726-2000 for a free estimate on collision and auto body repair."
+        keywords="contact auto body shop, collision center Roswell GA, free estimate, auto repair phone"
+      />
       <section className="relative bg-navy text-white py-32 md:py-48 overflow-hidden">
         <div className="absolute inset-0 flex justify-center">
           <div className="relative w-full max-w-7xl">

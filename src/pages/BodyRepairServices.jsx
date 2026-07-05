@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const BodyRepairServices = () => {
   const services = [
@@ -56,6 +57,11 @@ const BodyRepairServices = () => {
 
   return (
     <div>
+      <SEO
+        title="Body Repair Services – Collision, Paint & Dent Repair | Mavi Collision Center"
+        description="Expert collision repair, auto painting, paintless dent repair, frame straightening, and glass replacement in Roswell, GA. Restore your vehicle to pre-accident condition."
+        keywords="body repair, collision repair, auto painting, paintless dent repair, frame repair, bumper repair, glass replacement"
+      />
       <section className="relative bg-navy text-white py-32 md:py-48 overflow-hidden">
         <div className="absolute inset-0 flex justify-center">
           <div className="relative w-full max-w-7xl">
