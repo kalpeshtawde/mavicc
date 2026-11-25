@@ -7,3 +7,26 @@
     @apply font-sans antialiased;
   }
 }
+
+/* Holiday snowfall effect */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(110vh) translateX(6vw) rotate(360deg);
+    opacity: 0.15;
+  }
+}
+
+.snowflake {
+  position: absolute;
+  top: -10vh;
+  border-radius: 9999px;
+  background: #ffffff;
+  pointer-events: none;
+  animation-name: snowfall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

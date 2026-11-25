@@ -3,6 +3,10 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
+# Holiday theme toggle (set VITE_HOLIDAY_MODE=true to enable during the holidays)
+ARG VITE_HOLIDAY_MODE=false
+ENV VITE_HOLIDAY_MODE=$VITE_HOLIDAY_MODE
+
 COPY package*.json ./
 
 RUN npm install

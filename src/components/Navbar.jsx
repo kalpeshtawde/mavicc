@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import logo from '../assets/logo.webp';
+import { isHolidayMode } from '../holidayMode';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,15 +27,24 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           <div className="flex items-center space-x-4">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="relative flex items-center flex-shrink-0">
               <img src={logo} alt="Mavi Collision Center" className="h-20 w-auto" />
+              {isHolidayMode && (
+                <svg viewBox="0 0 64 64" className="absolute -top-1 -right-2 w-8 h-8 drop-shadow-md" aria-hidden="true">
+                  <circle cx="32" cy="9" r="7" fill="#fff" />
+                  <path d="M32 14 L52 46 Q52 50 48 50 L16 50 Q12 50 12 46 Z" fill="#C8102E" />
+                  <rect x="12" y="46" width="40" height="7" rx="3.5" fill="#fff" />
+                </svg>
+              )}
             </Link>
             
             {/* Call Now Buttons */}
             <div className="flex items-center space-x-2">
               <a
                 href="tel:+17627262000"
-                className="flex items-center space-x-2 bg-primary hover:bg-blue-600 text-white px-3 py-2 rounded-lg font-semibold transition-colors duration-200 shadow-lg text-sm"
+                className={`flex items-center space-x-2 text-white px-3 py-2 rounded-lg font-semibold transition-colors duration-200 shadow-lg text-sm ${
+                  isHolidayMode ? 'bg-holiday-red hover:bg-holiday-green' : 'bg-primary hover:bg-blue-600'
+                }`}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -121,7 +131,7 @@ const Navbar = () => {
               <button
                 onClick={() => changeLanguage('en')}
                 className={`px-3 py-1 rounded transition-colors duration-200 ${
-                  i18n.language === 'en' ? 'bg-primary text-white' : 'hover:bg-steel'
+                  i18n.language === 'en' ? (isHolidayMode ? 'bg-holiday-red text-white' : 'bg-primary text-white') : 'hover:bg-steel'
                 }`}
               >
                 EN
@@ -129,7 +139,7 @@ const Navbar = () => {
               <button
                 onClick={() => changeLanguage('es')}
                 className={`px-3 py-1 rounded transition-colors duration-200 ${
-                  i18n.language === 'es' ? 'bg-primary text-white' : 'hover:bg-steel'
+                  i18n.language === 'es' ? (isHolidayMode ? 'bg-holiday-red text-white' : 'bg-primary text-white') : 'hover:bg-steel'
                 }`}
               >
                 ES
@@ -171,7 +181,9 @@ const Navbar = () => {
           {/* Call Now Buttons - Mobile */}
           <a
             href="tel:+17627262000"
-            className="flex items-center justify-center space-x-2 bg-primary hover:bg-blue-600 text-white px-4 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-lg"
+            className={`flex items-center justify-center space-x-2 text-white px-4 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-lg ${
+              isHolidayMode ? 'bg-holiday-red hover:bg-holiday-green' : 'bg-primary hover:bg-blue-600'
+            }`}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -233,7 +245,7 @@ const Navbar = () => {
             <button
               onClick={() => changeLanguage('en')}
               className={`px-4 py-2 rounded transition-colors duration-200 ${
-                i18n.language === 'en' ? 'bg-primary text-white' : 'bg-steel'
+                i18n.language === 'en' ? (isHolidayMode ? 'bg-holiday-red text-white' : 'bg-primary text-white') : 'bg-steel'
               }`}
             >
               English
@@ -241,7 +253,7 @@ const Navbar = () => {
             <button
               onClick={() => changeLanguage('es')}
               className={`px-4 py-2 rounded transition-colors duration-200 ${
-                i18n.language === 'es' ? 'bg-primary text-white' : 'bg-steel'
+                i18n.language === 'es' ? (isHolidayMode ? 'bg-holiday-red text-white' : 'bg-primary text-white') : 'bg-steel'
               }`}
             >
               Español

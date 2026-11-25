@@ -238,5 +238,9 @@
     "hoursSun": "Sunday: Closed",
     "copyright": "Mavi Collision Center. All rights reserved.",
     "developedBy": "Developed & maintained by"
+  },
+  "holiday": {
+    "banner": "Happy Holidays from Mavi Collision Center! We'll be closed Dec 25 & Jan 1.",
+    "heroBadge": "Merry Christmas from our family to yours"
   }
 }

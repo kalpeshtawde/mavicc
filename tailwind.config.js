@@ -22,6 +22,12 @@ export default {
         warmwhite: '#FFFBEB',
         success: '#22C55E',
         danger: '#EF4444',
+        holiday: {
+          red: '#C8102E',
+          green: '#0E5A2E',
+          gold: '#F5C518',
+          cream: '#FDF6E3',
+        },
       },
     },
   },

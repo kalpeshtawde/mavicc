@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
+import { isHolidayMode } from '../holidayMode';
 
 const Home = () => {
   const { t } = useTranslation();
@@ -29,7 +30,15 @@ const Home = () => {
           </div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>
-          <div className="text-accent text-3xl md:text-5xl font-extrabold mb-6 tracking-wider uppercase" style={{ letterSpacing: '0.15em' }}>
+          {isHolidayMode && (
+            <div className="inline-flex items-center gap-2 bg-holiday-red text-white text-sm md:text-base font-semibold px-4 py-2 rounded-full mb-6 shadow-lg">
+              <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 0l2.4 7.2L21.6 9l-5.4 4.2 1.8 7.8-6-3.6-6 3.6 1.8-7.8L2.4 9l7.2-1.8L12 0z" />
+              </svg>
+              {t('holiday.heroBadge')}
+            </div>
+          )}
+          <div className={`text-3xl md:text-5xl font-extrabold mb-6 tracking-wider uppercase ${isHolidayMode ? 'text-holiday-gold' : 'text-accent'}`} style={{ letterSpacing: '0.15em' }}>
             MAVI COLLISION CENTER
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -64,7 +73,9 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors duration-200"
+              className={`text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 ${
+                isHolidayMode ? 'bg-holiday-red hover:bg-holiday-green' : 'bg-primary hover:bg-blue-600'
+              }`}
             >
               {t('home.hero.cta1')}
             </Link>
@@ -84,7 +95,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Insurance Approved */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
-              <div className="flex items-center justify-center bg-accent rounded-full w-20 h-20 shadow-lg flex-shrink-0">
+              <div className={`flex items-center justify-center rounded-full w-20 h-20 shadow-lg flex-shrink-0 ${isHolidayMode ? 'bg-holiday-red' : 'bg-accent'}`}>
                 <svg className="w-10 h-10 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
@@ -97,7 +108,7 @@ const Home = () => {
 
             {/* Payment Methods */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
-              <div className="flex items-center justify-center bg-primary rounded-full w-20 h-20 shadow-lg flex-shrink-0">
+              <div className={`flex items-center justify-center rounded-full w-20 h-20 shadow-lg flex-shrink-0 ${isHolidayMode ? 'bg-holiday-green' : 'bg-primary'}`}>
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                 </svg>
@@ -116,15 +127,15 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
             <div>
-              <div className="text-5xl font-bold text-accent mb-2">25+</div>
+              <div className={`text-5xl font-bold mb-2 ${isHolidayMode ? 'text-holiday-gold' : 'text-accent'}`}>25+</div>
               <div className="text-xl text-silver">{t('home.stats.years')}</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-accent mb-2">10,000+</div>
+              <div className={`text-5xl font-bold mb-2 ${isHolidayMode ? 'text-holiday-gold' : 'text-accent'}`}>10,000+</div>
               <div className="text-xl text-silver">{t('home.stats.cars')}</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-accent mb-2">98%</div>
+              <div className={`text-5xl font-bold mb-2 ${isHolidayMode ? 'text-holiday-gold' : 'text-accent'}`}>98%</div>
               <div className="text-xl text-silver">{t('home.stats.customers')}</div>
             </div>
           </div>
@@ -139,7 +150,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Body Repair Services */}
             <Link to="/services/body-repair" className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 group">
-              <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-200">
+              <div className={`${isHolidayMode ? 'text-holiday-red' : 'text-primary'} mb-4 group-hover:scale-110 transition-transform duration-200`}>
                 <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
@@ -150,32 +161,32 @@ const Home = () => {
               </p>
               <ul className="text-slate space-y-2 mb-4">
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-5 h-5 ${isHolidayMode ? 'text-holiday-red' : 'text-primary'} mr-2 mt-0.5 flex-shrink-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{t('home.services.bodyRepair.service1')}</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-5 h-5 ${isHolidayMode ? 'text-holiday-red' : 'text-primary'} mr-2 mt-0.5 flex-shrink-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{t('home.services.bodyRepair.service2')}</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-primary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-5 h-5 ${isHolidayMode ? 'text-holiday-red' : 'text-primary'} mr-2 mt-0.5 flex-shrink-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{t('home.services.bodyRepair.service3')}</span>
                 </li>
               </ul>
-              <span className="text-primary font-semibold group-hover:underline inline-flex items-center">
+              <span className={`${isHolidayMode ? 'text-holiday-red' : 'text-primary'} font-semibold group-hover:underline inline-flex items-center`}>
                 {t('home.services.bodyRepair.viewAll')} →
               </span>
             </Link>
 
             {/* Mechanical Services */}
             <Link to="/services/mechanical" className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 group">
-              <div className="text-accent mb-4 group-hover:scale-110 transition-transform duration-200">
+              <div className={`${isHolidayMode ? 'text-holiday-gold' : 'text-accent'} mb-4 group-hover:scale-110 transition-transform duration-200`}>
                 <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -187,25 +198,25 @@ const Home = () => {
               </p>
               <ul className="text-slate space-y-2 mb-4">
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-5 h-5 ${isHolidayMode ? 'text-holiday-gold' : 'text-accent'} mr-2 mt-0.5 flex-shrink-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{t('home.services.mechanical.service1')}</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-5 h-5 ${isHolidayMode ? 'text-holiday-gold' : 'text-accent'} mr-2 mt-0.5 flex-shrink-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{t('home.services.mechanical.service2')}</span>
                 </li>
                 <li className="flex items-start">
-                  <svg className="w-5 h-5 text-accent mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-5 h-5 ${isHolidayMode ? 'text-holiday-gold' : 'text-accent'} mr-2 mt-0.5 flex-shrink-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{t('home.services.mechanical.service3')}</span>
                 </li>
               </ul>
-              <span className="text-accent font-semibold group-hover:underline inline-flex items-center">
+              <span className={`${isHolidayMode ? 'text-holiday-gold' : 'text-accent'} font-semibold group-hover:underline inline-flex items-center`}>
                 {t('home.services.mechanical.viewAll')} →
               </span>
             </Link>
@@ -260,7 +271,9 @@ const Home = () => {
           <div className="text-center">
             <Link
               to="/gallery"
-              className="inline-block bg-primary text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-colors duration-200"
+              className={`text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 ${
+                isHolidayMode ? 'bg-holiday-red hover:bg-holiday-green' : 'bg-primary hover:bg-blue-600'
+              }`}
             >
               {t('home.gallery.viewAll')}
             </Link>
@@ -276,15 +289,19 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-accent py-16">
+      <section className={`${isHolidayMode ? 'bg-holiday-red' : 'bg-accent'} py-16`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-navy mb-4">{t('home.cta.title')}</h2>
-          <p className="text-xl text-navy mb-8">
+          <h2 className={`text-4xl font-bold mb-4 ${isHolidayMode ? 'text-white' : 'text-navy'}`}>{t('home.cta.title')}</h2>
+          <p className={`text-xl mb-8 ${isHolidayMode ? 'text-white' : 'text-navy'}`}>
             {t('home.cta.subtitle')}
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-navy text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors duration-200"
+            className={`inline-block px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200 ${
+              isHolidayMode
+                ? 'bg-white text-holiday-red hover:bg-holiday-cream'
+                : 'bg-navy text-white hover:bg-opacity-90'
+            }`}
           >
             {t('home.cta.button')}
           </Link>

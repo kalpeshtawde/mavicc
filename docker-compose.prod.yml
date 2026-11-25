@@ -5,6 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        # Flip to true in the server's .env during the holiday season
+        VITE_HOLIDAY_MODE: ${VITE_HOLIDAY_MODE:-false}
     container_name: mavicc-web
     ports:
       - "8083:80"
