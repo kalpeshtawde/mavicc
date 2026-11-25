@@ -24,4 +24,11 @@ i18n
     }
   });
 
+const setDocumentLang = (lng) => {
+  document.documentElement.lang = lng.startsWith('es') ? 'es' : 'en';
+};
+
+setDocumentLang(i18n.language);
+i18n.on('languageChanged', setDocumentLang);
+
 export default i18n;

@@ -4,35 +4,26 @@
     "services": "Servicios",
     "gallery": "Galería",
     "about": "Nosotros",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "faq": "Preguntas Frecuentes",
+    "call": "Llamar",
+    "bodyRepair": "Servicios de Reparación de Carrocería",
+    "bodyRepairSub": "Colisión, Pintura, Reparación de Abolladuras",
+    "mechanical": "Servicios Mecánicos",
+    "mechanicalSub": "Motor, Transmisión, Frenos"
   },
   "home": {
     "hero": {
       "title": "Reparación de Colisiones Experta en la que Puede Confiar",
       "subtitle": "Servicios profesionales de reparación de carrocería con tecnología de última generación y técnicos certificados",
       "cta1": "Obtener Presupuesto Gratis",
-      "cta2": "Ver Servicios"
+      "cta2": "Ver Servicios",
+      "rating": "4.9/5 basado en reseñas de Google"
     },
     "stats": {
       "years": "Años en el Negocio",
       "cars": "Autos Reparados",
       "customers": "Clientes Satisfechos"
-    },
-    "servicesPreview": {
-      "title": "Nuestros Servicios",
-      "collision": {
-        "title": "Reparación de Colisiones",
-        "description": "Servicios completos de reparación de colisiones para restaurar su vehículo a su condición previa al accidente"
-      },
-      "paint": {
-        "title": "Servicios de Pintura",
-        "description": "Igualación profesional de pintura y aplicación para un acabado impecable"
-      },
-      "insurance": {
-        "title": "Reclamos de Seguro",
-        "description": "Trabajamos directamente con su compañía de seguros para agilizar el proceso de reclamos"
-      },
-      "learnMore": "Más Información"
     },
     "badges": {
       "insurance": {
@@ -68,7 +59,8 @@
     "gallery": {
       "title": "Nuestro Trabajo",
       "subtitle": "Vea la calidad de nuestros servicios de reparación de colisión y pintura",
-      "viewAll": "Ver Galería Completa"
+      "viewAll": "Ver Galería Completa",
+      "imageAlt": "Foto de un trabajo de reparación de colisiones"
     },
     "reviews": {
       "title": "Lo Que Dicen Nuestros Clientes",
@@ -240,6 +232,10 @@
     "tagline": "Servicios expertos de reparación de colisiones en los que puede confiar. Restaurando su vehículo a la perfección.",
     "quickLinks": "Enlaces Rápidos",
     "contactInfo": "Información de Contacto",
+    "businessHours": "Horario de Atención",
+    "hoursWeek": "Lun - Vie: 8:30 AM - 6:00 PM",
+    "hoursSat": "Sábado: 8:30 AM - 2:00 PM",
+    "hoursSun": "Domingo: Cerrado",
     "copyright": "Mavi Collision Center. Todos los derechos reservados.",
     "developedBy": "Desarrollado y mantenido por"
   }

@@ -18,7 +18,7 @@ const Home = () => {
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: 'url(/images/hero-background.webp)',
+                backgroundImage: 'url(/images/hero-background-lg.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -58,7 +58,7 @@ const Home = () => {
               ))}
             </div>
             <span className="text-base md:text-lg font-medium">
-              4.9/5 based on Google Reviews
+              {t('home.hero.rating')}
             </span>
           </a>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -222,28 +222,36 @@ const Home = () => {
             <Link to="/gallery" className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-200 group">
               <img 
                 src="/images/gallery/collision/1.webp" 
-                alt="Collision Repair 1" 
+                alt={t('home.gallery.imageAlt')}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
               />
             </Link>
             <Link to="/gallery" className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-200 group">
               <img 
                 src="/images/gallery/collision/2.webp" 
-                alt="Collision Repair 2" 
+                alt={t('home.gallery.imageAlt')}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
               />
             </Link>
             <Link to="/gallery" className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-200 group">
               <img 
                 src="/images/gallery/collision/3.webp" 
-                alt="Collision Repair 3" 
+                alt={t('home.gallery.imageAlt')}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
               />
             </Link>
             <Link to="/gallery" className="aspect-square rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-200 group">
               <img 
                 src="/images/gallery/collision/4.webp" 
-                alt="Collision Repair 4" 
+                alt={t('home.gallery.imageAlt')}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
               />
             </Link>

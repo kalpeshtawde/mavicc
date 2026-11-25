@@ -4,35 +4,26 @@
     "services": "Services",
     "gallery": "Gallery",
     "about": "About",
-    "contact": "Contact"
+    "contact": "Contact",
+    "faq": "FAQ",
+    "call": "Call",
+    "bodyRepair": "Body Repair Services",
+    "bodyRepairSub": "Collision, Paint, Dent Repair",
+    "mechanical": "Mechanical Services",
+    "mechanicalSub": "Engine, Transmission, Brakes"
   },
   "home": {
     "hero": {
       "title": "Expert Collision Repair You Can Trust",
       "subtitle": "Professional auto body repair services with state-of-the-art technology and certified technicians",
       "cta1": "Get Free Estimate",
-      "cta2": "View Services"
+      "cta2": "View Services",
+      "rating": "4.9/5 based on Google Reviews"
     },
     "stats": {
       "years": "Years in Business",
       "cars": "Cars Repaired",
       "customers": "Happy Customers"
-    },
-    "servicesPreview": {
-      "title": "Our Services",
-      "collision": {
-        "title": "Collision Repair",
-        "description": "Complete collision repair services to restore your vehicle to pre-accident condition"
-      },
-      "paint": {
-        "title": "Paint Services",
-        "description": "Professional paint matching and application for a flawless finish"
-      },
-      "insurance": {
-        "title": "Insurance Claims",
-        "description": "We work directly with your insurance company to streamline the claims process"
-      },
-      "learnMore": "Learn More"
     },
     "badges": {
       "insurance": {
@@ -68,7 +59,8 @@
     "gallery": {
       "title": "Our Work",
       "subtitle": "See the quality of our collision repair and paint services",
-      "viewAll": "View Full Gallery"
+      "viewAll": "View Full Gallery",
+      "imageAlt": "Collision repair work photo"
     },
     "reviews": {
       "title": "What Our Customers Say",
@@ -240,6 +232,10 @@
     "tagline": "Expert collision repair services you can trust. Restoring your vehicle to perfection.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Info",
+    "businessHours": "Business Hours",
+    "hoursWeek": "Mon - Fri: 8:30 AM - 6:00 PM",
+    "hoursSat": "Saturday: 8:30 AM - 2:00 PM",
+    "hoursSun": "Sunday: Closed",
     "copyright": "Mavi Collision Center. All rights reserved.",
     "developedBy": "Developed & maintained by"
   }

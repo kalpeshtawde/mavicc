@@ -95,15 +95,15 @@ const Navbar = () => {
                       to="/services/body-repair"
                       className="block px-4 py-3 hover:bg-ice transition-colors duration-200"
                     >
-                      <div className="font-semibold">Body Repair Services</div>
-                      <div className="text-sm text-slate">Collision, Paint, Dent Repair</div>
+                      <div className="font-semibold">{t('nav.bodyRepair')}</div>
+                      <div className="text-sm text-slate">{t('nav.bodyRepairSub')}</div>
                     </Link>
                     <Link
                       to="/services/mechanical"
                       className="block px-4 py-3 hover:bg-ice transition-colors duration-200"
                     >
-                      <div className="font-semibold">Mechanical Services</div>
-                      <div className="text-sm text-slate">Engine, Transmission, Brakes</div>
+                      <div className="font-semibold">{t('nav.mechanical')}</div>
+                      <div className="text-sm text-slate">{t('nav.mechanicalSub')}</div>
                     </Link>
                   </div>
                 </div>
@@ -139,7 +139,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-navy-light transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-steel transition-colors"
           >
             <div className="w-6 h-5 flex flex-col justify-between">
               <span
@@ -163,8 +163,8 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+        className={`md:hidden overflow-y-auto transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="px-4 pt-2 pb-4 space-y-2 bg-navy border-t border-steel">
@@ -176,7 +176,7 @@ const Navbar = () => {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span>Call: (762) 726-2000</span>
+            <span>{t('nav.call')}: (762) 726-2000</span>
           </a>
           <a
             href="tel:+16786915109"
@@ -185,7 +185,7 @@ const Navbar = () => {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span>Call: (678) 691-5109</span>
+            <span>{t('nav.call')}: (678) 691-5109</span>
           </a>
           
           {navLinks.map((link) => (
@@ -209,16 +209,16 @@ const Navbar = () => {
             onClick={() => setIsOpen(false)}
             className="block px-4 py-3 rounded-lg hover:bg-steel transition-colors duration-200"
           >
-            <div className="font-semibold">Body Repair Services</div>
-            <div className="text-sm text-silver">Collision, Paint, Dent Repair</div>
+            <div className="font-semibold">{t('nav.bodyRepair')}</div>
+            <div className="text-sm text-silver">{t('nav.bodyRepairSub')}</div>
           </Link>
           <Link
             to="/services/mechanical"
             onClick={() => setIsOpen(false)}
             className="block px-4 py-3 rounded-lg hover:bg-steel transition-colors duration-200"
           >
-            <div className="font-semibold">Mechanical Services</div>
-            <div className="text-sm text-silver">Engine, Transmission, Brakes</div>
+            <div className="font-semibold">{t('nav.mechanical')}</div>
+            <div className="text-sm text-silver">{t('nav.mechanicalSub')}</div>
           </Link>
           
           <Link

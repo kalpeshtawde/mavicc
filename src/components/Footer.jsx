@@ -15,9 +15,10 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/mavicollisioncenter"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
                 className="text-slate hover:text-primary transition-colors duration-200"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -25,9 +26,10 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/mavicollisioncenter"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Instagram"
                 className="text-slate hover:text-primary transition-colors duration-200"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -35,13 +37,14 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://share.google/gkXBqc7ozK8Zmtdk4"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Google Reviews"
                 className="text-slate hover:text-primary transition-colors duration-200"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
                 </svg>
               </a>
             </div>
@@ -77,7 +80,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/faq" className="text-slate hover:text-primary transition-colors duration-200">
-                  FAQ
+                  {t('nav.faq')}
                 </Link>
               </li>
             </ul>
@@ -110,10 +113,10 @@ const Footer = () => {
               </li>
             </ul>
             <div className="mt-4">
-              <h4 className="font-semibold mb-2">Business Hours</h4>
-              <p className="text-slate text-sm">Mon - Fri: 8:30 AM - 6:00 PM</p>
-              <p className="text-slate text-sm">Saturday: 8:30 AM - 2:00 PM</p>
-              <p className="text-slate text-sm">Sunday: Closed</p>
+              <h4 className="font-semibold mb-2">{t('footer.businessHours')}</h4>
+              <p className="text-slate text-sm">{t('footer.hoursWeek')}</p>
+              <p className="text-slate text-sm">{t('footer.hoursSat')}</p>
+              <p className="text-slate text-sm">{t('footer.hoursSun')}</p>
             </div>
           </div>
         </div>
